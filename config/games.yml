@@ -1,0 +1,442 @@
+# Assassin's Creed franchise — trophy availability timeline
+#
+# trophy_groups: chaque entrée correspond à un lot de trophées rendu disponible
+# à une date donnée (jeu de base ou DLC).
+#
+# psn_communication_id: npCommunicationId de l'API PlayStation
+
+games:
+  - psn_communication_id: "NPWR00894_00"
+    name: "Assassin's Creed II"
+    platform: "PS3"
+    release_date: "2009-11-20"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2009-11-20"
+        total_count: 51
+
+  - psn_communication_id: "NPWR01254_00"
+    name: "Assassin's Creed Brotherhood"
+    platform: "PS3"
+    release_date: "2010-11-19"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2010-11-19"
+        total_count: 51
+      - name: "The Da Vinci Disappearance"
+        release_date: "2011-03-09"
+        total_count: 10
+
+  - psn_communication_id: "NPWR02350_00"
+    name: "Assassin's Creed Revelations"
+    platform: "PS3"
+    release_date: "2011-11-15"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2011-11-15"
+        total_count: 50
+      - name: "Ancestors Character Pack"
+        release_date: "2011-12-13"
+        total_count: 4
+      - name: "Mediterranean Traveler Map Pack"
+        release_date: "2012-01-24"
+        total_count: 6
+      - name: "The Lost Archive"
+        release_date: "2012-02-28"
+        total_count: 10
+
+  - psn_communication_id: "NPWR03546_00"
+    name: "Assassin's Creed III"
+    platform: "PS3"
+    release_date: "2012-10-31"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2012-10-31"
+        total_count: 51
+      - name: "The Battle Hardened Pack"
+        release_date: "2013-01-08"
+        total_count: 4
+      - name: "Tyranny of King Washington - The Infamy"
+        release_date: "2013-02-19"
+        total_count: 4
+      - name: "Tyranny of King Washington - The Betrayal"
+        release_date: "2013-03-19"
+        total_count: 3
+      - name: "Tyranny of King Washington - The Redemption"
+        release_date: "2013-04-23"
+        total_count: 3
+
+  - psn_communication_id: "NPWR03134_00"
+    name: "Assassin's Creed III Liberation"
+    platform: "PSVITA"
+    release_date: "2012-10-31"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2012-10-31"
+        total_count: 45
+
+  - psn_communication_id: "NPWR04633_00"
+    name: "Assassin's Creed IV Black Flag"
+    platform: "PS3"
+    release_date: "2013-10-29"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2013-10-29"
+        total_count: 51
+      - name: "Blackbeard's Wrath"
+        release_date: "2013-12-11"
+        total_count: 4
+      - name: "Freedom Cry"
+        release_date: "2013-12-17"
+        total_count: 6
+
+  - psn_communication_id: "NPWR04841_00"
+    name: "Assassin's Creed IV Black Flag"
+    platform: "PS4"
+    release_date: "2013-11-29"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2013-11-29"
+        total_count: 51
+      - name: "Blackbeard's Wrath"
+        release_date: "2013-12-11"
+        total_count: 4
+      - name: "Freedom Cry"
+        release_date: "2013-12-17"
+        total_count: 6
+
+  - psn_communication_id: "NPWR04787_00"
+    name: "Assassin's Creed Liberation HD"
+    platform: "PS3"
+    release_date: "2014-01-15"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2014-01-15"
+        total_count: 31
+
+  - psn_communication_id: "NPWR06048_00"
+    name: "Assassin's Creed Freedom Cry"
+    platform: "PS3"
+    release_date: "2014-02-19"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2014-02-19"
+        total_count: 12
+
+  - psn_communication_id: "NPWR06071_00"
+    name: "Assassin's Creed Freedom Cry"
+    platform: "PS4"
+    release_date: "2014-02-19"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2014-02-19"
+        total_count: 12
+
+  - psn_communication_id: "NPWR06600_00"
+    name: "Assassin's Creed Unity"
+    platform: "PS4"
+    release_date: "2014-11-13"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2014-11-13"
+        total_count: 51
+      - name: "Dead Kings"
+        release_date: "2015-01-14"
+        total_count: 7
+
+  - psn_communication_id: "NPWR07220_00"
+    name: "Assassin's Creed Rogue"
+    platform: "PS3"
+    release_date: "2014-11-13"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2014-11-13"
+        total_count: 47
+
+  - psn_communication_id: "NPWR08266_00"
+    name: "Assassin's Creed Chronicles: China"
+    platform: "PS4"
+    release_date: "2015-04-21"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2015-04-21"
+        total_count: 18
+
+  - psn_communication_id: "NPWR08934_00"
+    name: "Assassin's Creed Syndicate"
+    platform: "PS4"
+    release_date: "2015-10-23"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2015-10-23"
+        total_count: 50
+      - name: "Jack the Ripper"
+        release_date: "2015-12-15"
+        total_count: 7
+
+  - psn_communication_id: "NPWR08441_00"
+    name: "Assassin's Creed Chronicles: India"
+    platform: "PS4"
+    release_date: "2016-01-12"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2016-01-12"
+        total_count: 18
+
+  - psn_communication_id: "NPWR08442_00"
+    name: "Assassin's Creed Chronicles: Russia"
+    platform: "PS4"
+    release_date: "2016-02-09"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2016-02-09"
+        total_count: 17
+
+  - psn_communication_id: "NPWR09870_00"
+    name: "Assassin's Creed Chronicles: Trilogy Pack"
+    platform: "PS4"
+    release_date: "2016-02-10"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2016-02-10"
+        total_count: 55
+
+  - psn_communication_id: "NPWR09429_00"
+    name: "Assassin's Creed Chronicles"
+    platform: "PSVITA"
+    release_date: "2016-04-06"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2016-04-06"
+        total_count: 55
+
+  - psn_communication_id: "NPWR11435_00"
+    name: "Assassin's Creed II"
+    platform: "PS4"
+    release_date: "2016-11-18"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2016-11-18"
+        total_count: 51
+
+  - psn_communication_id: "NPWR11436_00"
+    name: "Assassin's Creed Brotherhood"
+    platform: "PS4"
+    release_date: "2016-11-18"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2016-11-18"
+        total_count: 51
+
+  - psn_communication_id: "NPWR11437_00"
+    name: "Assassin's Creed Revelations"
+    platform: "PS4"
+    release_date: "2016-11-18"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2016-11-18"
+        total_count: 50
+
+  - psn_communication_id: "NPWR11424_00"
+    name: "Assassin's Creed Origins"
+    platform: "PS4"
+    release_date: "2017-10-27"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2017-10-27"
+        total_count: 51
+      - name: "The Hidden Ones"
+        release_date: "2018-01-23"
+        total_count: 8
+      - name: "Discovery Tour: Ancien Egypt"
+        release_date: "2018-02-20"
+        total_count: 3
+      - name: "The Curse of the Pharaohs"
+        release_date: "2018-03-13"
+        total_count: 6
+
+  - psn_communication_id: "NPWR14361_00"
+    name: "Assassin's Creed Rogue Remastered"
+    platform: "PS4"
+    release_date: "2018-03-20"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2018-03-20"
+        total_count: 47
+
+  - psn_communication_id: "NPWR13822_00"
+    name: "Assassin's Creed Odyssey"
+    platform: "PS4"
+    release_date: "2018-10-05"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2018-10-05"
+        total_count: 51
+      - name: "Additional Feats"
+        release_date: "2018-11-01"
+        total_count: 13
+      - name: "Legacy of the First Blade - Hunted"
+        release_date: "2018-12-04"
+        total_count: 5
+      - name: "Legacy of the First Blade - Shadow Heritage"
+        release_date: "2019-01-15"
+        total_count: 5
+      - name: "Legacy of the First Blade - Bloodline"
+        release_date: "2019-03-05"
+        total_count: 5
+      - name: "The Fate of Atlantis - Fields of Elysium"
+        release_date: "2019-04-23"
+        total_count: 5
+      - name: "The Fate of Atlantis - Torment of Hades"
+        release_date: "2019-06-04"
+        total_count: 5
+      - name: "The Fate of Atlantis - Judgment of Atlantis"
+        release_date: "2019-07-16"
+        total_count: 5
+
+  - psn_communication_id: "NPWR15386_00"
+    name: "Assassin's Creed III Remastered"
+    platform: "PS4"
+    release_date: "2019-03-29"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2019-03-29"
+        total_count: 55
+
+  - psn_communication_id: "NPWR16633_00"
+    name: "Assassin's Creed Liberation Remastered"
+    platform: "PS4"
+    release_date: "2019-03-29"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2019-03-29"
+        total_count: 31
+
+  - psn_communication_id: "NPWR19842_00"
+    name: "Assassin's Creed Valhalla"
+    platform: "PS4"
+    release_date: "2020-11-10"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2020-11-10"
+        total_count: 51
+      - name: "Wrath of the Druids"
+        release_date: "2021-05-13"
+        total_count: 9
+      - name: "Mastery Challenge (Part 1)"
+        release_date: "2021-06-15"
+        total_count: 2
+      - name: "The Siege of Paris"
+        release_date: "2021-08-12"
+        total_count: 9
+      - name: "Tombs of the Fallen"
+        release_date: "2021-11-09"
+        total_count: 2
+      - name: "Dawn of Ragnarok"
+        release_date: "2022-03-10"
+        total_count: 9
+      - name: "Mastery Challenge The Reckoning (Part 2)"
+        release_date: "2022-04-19"
+        total_count: 1
+      - name: "The Forgotten Saga"
+        release_date: "2022-08-02"
+        total_count: 9
+      - name: "Tombs of the Fallen: Buried Knowledge"
+        release_date: "2022-09-27"
+        total_count: 1
+
+  - psn_communication_id: "NPWR20954_00"
+    name: "Assassin's Creed Valhalla"
+    platform: "PS5"
+    release_date: "2020-11-19"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2020-11-19"
+        total_count: 51
+      - name: "Wrath of the Druids"
+        release_date: "2021-05-13"
+        total_count: 9
+      - name: "Mastery Challenge (Part 1)"
+        release_date: "2021-06-15"
+        total_count: 2
+      - name: "The Siege of Paris"
+        release_date: "2021-08-12"
+        total_count: 9
+      - name: "Tombs of the Fallen"
+        release_date: "2021-11-09"
+        total_count: 2
+      - name: "Dawn of Ragnarok"
+        release_date: "2022-03-10"
+        total_count: 9
+      - name: "Mastery Challenge The Reckoning (Part 2)"
+        release_date: "2022-04-19"
+        total_count: 1
+      - name: "The Forgotten Saga"
+        release_date: "2022-08-02"
+        total_count: 9
+      - name: "Tombs of the Fallen: Buried Knowledge"
+        release_date: "2022-09-27"
+        total_count: 1
+
+  - psn_communication_id: "NPWR27060_00"
+    name: "Discovery Tour: Viking Age"
+    platform: "PS4"
+    release_date: "2022-06-14"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2022-06-14"
+        total_count: 12
+
+  - psn_communication_id: "NPWR26621_00"
+    name: "Discovery Tour: Viking Age"
+    platform: "PS5"
+    release_date: "2022-06-14"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2022-06-14"
+        total_count: 12
+
+  - psn_communication_id: "NPWR33913_00"
+    name: "Assassin's Creed Mirage"
+    platform: "PS4"
+    release_date: "2023-10-05"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2023-10-05"
+        total_count: 51
+      - name: "Valley of Memory"
+        release_date: "2025-11-18"
+        total_count: 11
+
+  - psn_communication_id: "NPWR29894_00"
+    name: "Assassin's Creed Mirage"
+    platform: "PS5"
+    release_date: "2023-10-05"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2023-10-05"
+        total_count: 51
+      - name: "Valley of Memory"
+        release_date: "2025-11-18"
+        total_count: 11
+
+  - psn_communication_id: "NPWR41753_00"
+    name: "Assassin's Creed Shadows"
+    platform: "PS5"
+    release_date: "2025-03-20"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2025-03-20"
+        total_count: 55
+      - name: "Free Update - Assassination Board"
+        release_date: "2025-06-25"
+        total_count: 1
+      - name: "Free Update - New Game+"
+        release_date: "2025-07-15"
+        total_count: 3
+      - name: "Claws of Awaji"
+        release_date: "2025-09-16"
+        total_count: 11
+      - name: "Free Update 3"
+        release_date: "2025-11-01"
+        total_count: 3

@@ -1,0 +1,149 @@
+<% content_for :title, "AC Trophies — lenyboy" %>
+
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --card: #16213e;
+    --accent: #0f3460;
+    --gold: #e9b44c;
+    --text: #eee;
+    --muted: #8892b0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  h1 span { color: var(--gold); }
+  .subtitle {
+    color: var(--muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+  .stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    min-width: 160px;
+    border: 1px solid var(--accent);
+  }
+  .stat-card .value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .stat-card .label {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+  .chart-container {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--accent);
+    margin-bottom: 2rem;
+  }
+  .chart-container h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--muted);
+  }
+  .footer {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .footer code {
+    background: var(--accent);
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+</style>
+
+<h1>Assassin's Creed <span>Trophy Tracker</span></h1>
+<p class="subtitle">Profil PSN : lenyboy</p>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="value"><%= @stats[:total_earned] %></div>
+    <div class="label">Troph&eacute;es obtenus</div>
+  </div>
+  <div class="stat-card">
+    <div class="value"><%= @stats[:total_available] %></div>
+    <div class="label">Troph&eacute;es disponibles</div>
+  </div>
+  <div class="stat-card">
+    <div class="value"><%= @stats[:completion] %>%</div>
+    <div class="label">Compl&eacute;tion</div>
+  </div>
+  <div class="stat-card">
+    <div class="value"><%= @stats[:games_played] %>/<%= @stats[:games_total] %></div>
+    <div class="label">Jeux jou&eacute;s</div>
+  </div>
+</div>
+
+<div class="chart-container">
+  <h2>Progression au fil du temps</h2>
+  <%= line_chart [
+    { name: "Trophées disponibles", data: @available_series },
+    { name: "Trophées obtenus", data: @earned_series }
+  ],
+  colors: ["#534bae", "#e9b44c"],
+  curve: false,
+  points: false,
+  library: {
+    scales: {
+      x: {
+        type: "time",
+        time: { unit: "year" },
+        grid: { color: "rgba(255,255,255,0.05)" },
+        ticks: { color: "#8892b0" }
+      },
+      y: {
+        grid: { color: "rgba(255,255,255,0.05)" },
+        ticks: { color: "#8892b0" }
+      }
+    },
+    plugins: {
+      legend: {
+        labels: { color: "#eee" }
+      },
+      tooltip: {
+        mode: "index",
+        intersect: false
+      }
+    },
+    elements: {
+      line: {
+        stepped: true,
+        borderWidth: 2
+      }
+    },
+    spanGaps: true,
+    interaction: {
+      mode: "nearest",
+      axis: "x",
+      intersect: false
+    }
+  },
+  height: "450px" %>
+</div>
+
+<div class="footer">
+  Pour mettre &agrave; jour : <code>rake sync</code> puis rafra&icirc;chir la page
+</div>
