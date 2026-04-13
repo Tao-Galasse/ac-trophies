@@ -1,0 +1,66 @@
+name: Sync trophies & deploy to Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 8 * * *" # Tous les jours à 08:00 heure de Paris
+      timezone: "Europe/Paris"
+  workflow_dispatch:
+
+# Permissions requises par actions/deploy-pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Évite les déploiements concurrents ; n'annule pas un run en cours
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: development
+      NPSSO: ${{ secrets.NPSSO }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      # Cache la DB SQLite entre runs pour améliorer les performances.
+      # Clé invalidée dès que games.yml change → re-seed propre quand on ajoute un jeu/DLC.
+      - name: Cache SQLite database
+        uses: actions/cache@v5
+        with:
+          path: storage/development.sqlite3
+          key: sqlite-${{ hashFiles('config/games.yml', 'db/schema.rb') }}
+          restore-keys: |
+            sqlite-
+
+      - name: Prepare database
+        run: bin/rails db:prepare db:seed
+
+      - name: Sync trophies from PSN
+        run: bin/rails sync_trophies
+
+      - name: Export static HTML
+        run: bin/rails export
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
