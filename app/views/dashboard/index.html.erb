@@ -105,7 +105,7 @@
   ],
   colors: ["#534bae", "#e9b44c"],
   curve: false,
-  points: false,
+  dataset: { pointRadius: 0, pointHoverRadius: 5 },
   library: {
     scales: {
       x: {
@@ -125,7 +125,8 @@
       },
       tooltip: {
         mode: "index",
-        intersect: false
+        intersect: false,
+        displayColors: true
       }
     },
     elements: {

@@ -1,8 +1,8 @@
 desc "Generate a static HTML chart page in docs/ (for GitHub Pages)"
 task export: :environment do
-  available_series = build_available_series
-  earned_series = build_earned_series
-  stats = build_stats
+  timeline = TrophyTimeline.new
+  available_series, earned_series = timeline.series
+  stats = timeline.stats
 
   output_dir = Rails.root.join("docs")
   FileUtils.mkdir_p(output_dir)
@@ -103,6 +103,7 @@ task export: :environment do
                 backgroundColor: "rgba(83, 75, 174, 0.1)",
                 stepped: true,
                 pointRadius: 0,
+                pointHoverRadius: 5,
                 borderWidth: 2,
                 fill: true
               },
@@ -113,6 +114,7 @@ task export: :environment do
                 backgroundColor: "rgba(233, 180, 76, 0.1)",
                 stepped: true,
                 pointRadius: 0,
+                pointHoverRadius: 5,
                 borderWidth: 2,
                 fill: true
               }
@@ -147,38 +149,4 @@ task export: :environment do
 
   File.write(output_dir.join("index.html"), html)
   puts "Exported to docs/index.html"
-end
-
-def build_available_series
-  events = TrophyGroup.order(:release_date).pluck(:release_date, :total_count)
-  cumulative = 0
-  series = events.each_with_object({}) do |(date, count), hash|
-    cumulative += count
-    hash[date.to_s] = cumulative
-  end
-  series[Date.today.to_s] = cumulative
-  series
-end
-
-def build_earned_series
-  trophies = EarnedTrophy.where.not(earned_at: nil).order(:earned_at)
-  cumulative = 0
-  series = trophies.each_with_object({}) do |trophy, hash|
-    cumulative += 1
-    hash[trophy.earned_at.to_date.to_s] = cumulative
-  end
-  series[Date.today.to_s] = cumulative
-  series
-end
-
-def build_stats
-  total_available = TrophyGroup.sum(:total_count)
-  total_earned = EarnedTrophy.count
-  {
-    total_available: total_available,
-    total_earned: total_earned,
-    completion: total_available > 0 ? (total_earned.to_f / total_available * 100).round(1) : 0,
-    games_played: EarnedTrophy.distinct.count(:game_id),
-    games_total: Game.count
-  }
 end
