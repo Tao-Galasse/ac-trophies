@@ -126,7 +126,7 @@ task export: :environment do
             scales: {
               x: {
                 type: "time",
-                time: { unit: "year" },
+                time: { unit: "year", tooltipFormat: "yyyy-MM-dd" },
                 grid: { color: "rgba(255,255,255,0.05)" },
                 ticks: { color: "#8892b0" }
               },
