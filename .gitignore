@@ -29,3 +29,6 @@
 
 # Bootsnap cache
 /tmp/cache/bootsnap*
+
+# Static export — généré par CI et publié sur GitHub Pages
+/docs/
