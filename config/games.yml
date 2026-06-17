@@ -432,11 +432,14 @@ games:
         release_date: "2025-06-25"
         total_count: 1
       - name: "Free Update - New Game+"
-        release_date: "2025-07-15"
+        release_date: "2025-07-29"
         total_count: 3
       - name: "Claws of Awaji"
         release_date: "2025-09-16"
         total_count: 11
-      - name: "Free Update 3"
-        release_date: "2025-11-01"
+      - name: "Free Update - A Puzzlement"
+        release_date: "2025-11-25"
+        total_count: 3
+      - name: "Free Update - Black Tides"
+        release_date: "2026-06-16"
         total_count: 3
