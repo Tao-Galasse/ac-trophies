@@ -443,3 +443,12 @@ games:
       - name: "Free Update - Black Tides"
         release_date: "2026-06-16"
         total_count: 3
+
+  - psn_communication_id: "NPWR50213_00"
+    name: "Assassin's Creed Black Flag Resynced"
+    platform: "PS5"
+    release_date: "2026-07-09"
+    trophy_groups:
+      - name: "Base Game"
+        release_date: "2026-07-09"
+        total_count: 50

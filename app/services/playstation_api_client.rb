@@ -39,6 +39,8 @@ class PlaystationApiClient
       }
     )
     JSON.parse(res)
+  rescue RestClient::NotFound
+    { "trophies" => [] } # never played the game; no trophies earned yet
   end
 
   private
