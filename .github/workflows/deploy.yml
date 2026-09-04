@@ -32,15 +32,15 @@ jobs:
         with:
           bundler-cache: true
 
-      # Cache la DB SQLite entre runs pour améliorer les performances.
+      # Cache la DB SQLite entre runs pour mémoriser les jeux complétés (skip des appels PSN).
       # Clé invalidée dès que games.yml change → re-seed propre quand on ajoute un jeu/DLC.
       - name: Cache SQLite database
         uses: actions/cache@v5
         with:
           path: storage/development.sqlite3
-          key: sqlite-${{ hashFiles('config/games.yml', 'db/schema.rb') }}
+          key: sqlite-${{ hashFiles('config/games.yml', 'db/schema.rb') }}-${{ github.run_id }}
           restore-keys: |
-            sqlite-
+            sqlite-${{ hashFiles('config/games.yml', 'db/schema.rb') }}-
 
       - name: Prepare database
         run: bin/rails db:prepare db:seed
