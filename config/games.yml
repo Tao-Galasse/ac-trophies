@@ -344,6 +344,9 @@ games:
       - name: "Tombs of the Fallen: Buried Knowledge"
         release_date: "2022-09-27"
         total_count: 1
+      - name: "New Game+"
+        release_date: "2026-11-05"
+        total_count: 2
 
   - psn_communication_id: "NPWR20954_00"
     name: "Assassin's Creed Valhalla"
@@ -377,6 +380,9 @@ games:
       - name: "Tombs of the Fallen: Buried Knowledge"
         release_date: "2022-09-27"
         total_count: 1
+      - name: "New Game+"
+        release_date: "2026-11-05"
+        total_count: 2
 
   - psn_communication_id: "NPWR27060_00"
     name: "Discovery Tour: Viking Age"
